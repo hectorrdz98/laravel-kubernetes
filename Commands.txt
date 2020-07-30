@@ -18,3 +18,10 @@ docker run -d \
   -p 8080:80 \
   -e APP_KEY=base64:cUPmwHx4LXa4Z25HhzFiWCf7TlQmSqnt98pnuiHmzgY= \
   hectorrdz98/laravel-kubernetes-demo
+
+
+kubectl run laravel-kubernetes-demo \
+  --restart=Never \
+  --image=hectorrdz98/laravel-kubernetes-demo \
+  --port=80 \
+  --env=APP_KEY=base64:cUPmwHx4LXa4Z25HhzFiWCf7TlQmSqnt98pnuiHmzgY=
